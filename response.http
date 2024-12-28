@@ -1,0 +1,78 @@
+
+POST http://localhost:3000/user_registration
+Content-Type: application/json
+
+{
+    "id":"150e8400-e29b-41d4-a716-446655440002",
+    "userName":"Arun Dhoundiyal",
+    "email":"arun@gmail.com",
+    "password":"Arun@1234"
+}
+
+### 
+
+POST http://localhost:3000/user_login 
+Content-Type: application/json
+
+{
+    "email":"arun@gmail.com",
+    "password":"Arun@1234"
+}
+
+### 
+
+GET http://localhost:3000/user_profile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFydW5AZ21haWwuY29tIiwiaWF0IjoxNzM1MDY1ODQ5fQ.et2102H-kc4CAJMPjcpGtEdNjYVHiM9RwCNb75B029M
+
+
+###
+POST http://localhost:3000/create_task
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFydW5AZ21haWwuY29tIiwiaWF0IjoxNzM1MDY1ODQ5fQ.et2102H-kc4CAJMPjcpGtEdNjYVHiM9RwCNb75B029M
+
+{
+    "taskName":"create Task Tracking Managment System",
+    "description":"I created a Task Tracking Managment System as a assignment that I got from a company Robotspace",
+    "dueDate":"2024-12-31",
+    "status":"In Progress",
+    "priority":"High"
+}
+
+### 
+GET http://localhost:3000/get_task/8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFydW5AZ21haWwuY29tIiwiaWF0IjoxNzM1MDY1ODQ5fQ.et2102H-kc4CAJMPjcpGtEdNjYVHiM9RwCNb75B029M
+
+### 
+
+
+DELETE http://localhost:3000/delete_task/7
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFydW5AZ21haWwuY29tIiwiaWF0IjoxNzM1MDY1ODQ5fQ.et2102H-kc4CAJMPjcpGtEdNjYVHiM9RwCNb75B029M
+
+###
+
+DELETE http://localhost:3000/delete_all_task
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFydW5AZ21haWwuY29tIiwiaWF0IjoxNzM1MDY1ODQ5fQ.et2102H-kc4CAJMPjcpGtEdNjYVHiM9RwCNb75B029M
+
+### 
+
+PUT http://localhost:3000/edit_task/8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFydW5AZ21haWwuY29tIiwiaWF0IjoxNzM1MDY1ODQ5fQ.et2102H-kc4CAJMPjcpGtEdNjYVHiM9RwCNb75B029M
+
+{
+    "taskName":"create Task Tracking Managment System",
+    "description":"I created a Task Tracking Managment System as a assignment that I got from a company Robotspace",
+    "dueDate":"2024-12-31",
+    "status":"Completed",
+    "priority":"Low"
+}
+
+### 
+
+GET http://localhost:3000/task_list/?status=&search=
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFydW5AZ21haWwuY29tIiwiaWF0IjoxNzM1MDY1ODQ5fQ.et2102H-kc4CAJMPjcpGtEdNjYVHiM9RwCNb75B029M
